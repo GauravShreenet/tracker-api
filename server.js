@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 8000;
 
 // routers
 import userRouter from "./src/router/userRouter.js"
+import budgetRouter from './src/router/budgetRouter.js'
 
 //middlewares
 app.use(express.json());
@@ -18,11 +19,7 @@ connectMongoDb();
 
 
 
-app.use("/api/v1/transa", (req, res)=> {
-    res.json({
-        message: "You called transaction api"
-    });
-});
+app.use("/api/v1/transa", budgetRouter);
 
 
 app.use("/api/v1/user", userRouter);

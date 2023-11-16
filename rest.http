@@ -17,6 +17,16 @@ GET http://localhost:8000
 ### transa get api
 GET {{transApi}}
 
+### transa post api
+POST {{transApi}}
+Content-Type: application/json
+
+{
+    "desc": "Food",
+    "type": "Cash",
+    "amount": "20"
+}
+
 ### user get api
 GET {{userApi}}
 
