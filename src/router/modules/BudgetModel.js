@@ -7,4 +7,3 @@ export const addBudget = obj => {
 export const getBudget = () => {
     return BudgetScheme.find();
 }
-
